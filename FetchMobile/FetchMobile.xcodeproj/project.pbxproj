@@ -14,6 +14,7 @@
 		9EA060102D89B7A500BCF1F4 /* FetchMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA0600F2D89B7A500BCF1F4 /* FetchMobileTests.swift */; };
 		9EA0601A2D89B7A500BCF1F4 /* FetchMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA060192D89B7A500BCF1F4 /* FetchMobileUITests.swift */; };
 		9EA0601C2D89B7A500BCF1F4 /* FetchMobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA0601B2D89B7A500BCF1F4 /* FetchMobileUITestsLaunchTests.swift */; };
+		9EA0602A2D89BBC100BCF1F4 /* NetworkComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA060292D89BBC100BCF1F4 /* NetworkComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9EA060152D89B7A500BCF1F4 /* FetchMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA060192D89B7A500BCF1F4 /* FetchMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMobileUITests.swift; sourceTree = "<group>"; };
 		9EA0601B2D89B7A500BCF1F4 /* FetchMobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9EA060292D89BBC100BCF1F4 /* NetworkComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		9EA05FFD2D89B78000BCF1F4 /* FetchMobile */ = {
 			isa = PBXGroup;
 			children = (
+				9EA060282D89BB6600BCF1F4 /* Services */,
 				9EA05FFE2D89B78100BCF1F4 /* FetchMobileApp.swift */,
 				9EA060002D89B78100BCF1F4 /* ContentView.swift */,
 				9EA060022D89B7A400BCF1F4 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				9EA0601B2D89B7A500BCF1F4 /* FetchMobileUITestsLaunchTests.swift */,
 			);
 			path = FetchMobileUITests;
+			sourceTree = "<group>";
+		};
+		9EA060282D89BB6600BCF1F4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9EA060292D89BBC100BCF1F4 /* NetworkComponent.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA0602A2D89BBC100BCF1F4 /* NetworkComponent.swift in Sources */,
 				9EA060012D89B78100BCF1F4 /* ContentView.swift in Sources */,
 				9EA05FFF2D89B78100BCF1F4 /* FetchMobileApp.swift in Sources */,
 			);
