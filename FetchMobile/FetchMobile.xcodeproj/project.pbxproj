@@ -16,6 +16,7 @@
 		9EA0601C2D89B7A500BCF1F4 /* FetchMobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA0601B2D89B7A500BCF1F4 /* FetchMobileUITestsLaunchTests.swift */; };
 		9EA0602A2D89BBC100BCF1F4 /* NetworkComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA060292D89BBC100BCF1F4 /* NetworkComponent.swift */; };
 		9EA0602C2D89BF4500BCF1F4 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA0602B2D89BF4500BCF1F4 /* RecipeService.swift */; };
+		9EA0602E2D89C76800BCF1F4 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA0602D2D89C76800BCF1F4 /* ImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		9EA0601B2D89B7A500BCF1F4 /* FetchMobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9EA060292D89BBC100BCF1F4 /* NetworkComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkComponent.swift; sourceTree = "<group>"; };
 		9EA0602B2D89BF4500BCF1F4 /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
+		9EA0602D2D89C76800BCF1F4 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				9EA060292D89BBC100BCF1F4 /* NetworkComponent.swift */,
 				9EA0602B2D89BF4500BCF1F4 /* RecipeService.swift */,
+				9EA0602D2D89C76800BCF1F4 /* ImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				9EA0602A2D89BBC100BCF1F4 /* NetworkComponent.swift in Sources */,
 				9EA060012D89B78100BCF1F4 /* ContentView.swift in Sources */,
 				9EA05FFF2D89B78100BCF1F4 /* FetchMobileApp.swift in Sources */,
+				9EA0602E2D89C76800BCF1F4 /* ImageService.swift in Sources */,
 				9EA0602C2D89BF4500BCF1F4 /* RecipeService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
