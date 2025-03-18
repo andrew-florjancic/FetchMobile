@@ -40,8 +40,8 @@ class RecipeService {
             throw URLError(.badURL)
         }
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
-        let (data, _) = try await networkComponent.fetchData(for: request)
-        // For the purpose of this exercize we will ignore the response and just decode the data
+        let data = try await networkComponent.fetchData(for: request)
+        // For the purpose of this exercise we will ignore the response and just decode the data
         let recipeContainer = try JSONDecoder().decode(RecipeContainer.self, from: data)
         return recipeContainer.recipes
     }
