@@ -14,8 +14,9 @@ final class RecipeServiceTests: XCTestCase {
     /// System under test
     var sut: RecipeService!
 
+    /// Tests the RecipeService using an endpoint that returns valid data.
     func testValidRecipeEndpoint() async throws {
-        sut = RecipeService(networkComponent: MockNetworkComponent(fileName: "recipes"))
+        sut = RecipeService(networkComponent: Mocks.RecipeService.valid.network)
         let recipes = try await sut.fetchRecipes()
         XCTAssertEqual(recipes.count, 63)
         XCTAssertEqual(recipes.first?.cuisine, "Malaysian")
@@ -27,16 +28,18 @@ final class RecipeServiceTests: XCTestCase {
         XCTAssertEqual(recipes.first?.videoURL, "https://www.youtube.com/watch?v=6R8ffRRJcrg")
     }
     
+    /// Tests the RecipeService using an endpoint that returns malformed data.
     func testMalformedRecipeEndpoint() async throws {
-        sut = RecipeService(networkComponent: MockNetworkComponent(fileName: "recipes-malformed"))
+        sut = RecipeService(networkComponent: Mocks.RecipeService.malformed.network)
         do {
             _ = try await sut.fetchRecipes()
             XCTFail("Expecting keyNotFound error to be thrown")
         } catch { }
     }
     
+    /// Tests the RecipeService using an endpoint that returns valid data but an empty list of recipes.
     func testEmptyRecipeEndpoint() async throws {
-        sut = RecipeService(networkComponent: MockNetworkComponent(fileName: "recipes-empty"))
+        sut = RecipeService(networkComponent: Mocks.RecipeService.empty.network)
         let recipes = try await sut.fetchRecipes()
         XCTAssertTrue(recipes.isEmpty)
     }

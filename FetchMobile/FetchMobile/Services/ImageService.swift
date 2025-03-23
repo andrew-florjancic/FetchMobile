@@ -18,16 +18,18 @@ class ImageService {
     /// The endpoint of the image to fetch.
     private let endpoint: String
     
-    /// A cache to store the `UIImage` after fetching.
-    private let cache: NSCache<NSString, UIImage> = NSCache<NSString, UIImage>()
+    /// A cache to store the `UIImage` after fetching the image.
+    private let cache: NSCache<NSString, UIImage>
     
     
     /// Creates a new ImageService.
     /// - Parameters:
     ///   - networkComponent: The network component used to fetch data.
     ///   - endpoint: The endpoint of the image to fetch.
-    init(networkComponent: NetworkComponent, endpoint: String) {
+    ///   - cache: A cache to store the `UIImage` after fetching the image.
+    init(networkComponent: NetworkComponent, cache: NSCache<NSString, UIImage>, endpoint: String) {
         self.networkComponent = networkComponent
+        self.cache = cache
         self.endpoint = endpoint
     }
     
