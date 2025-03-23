@@ -11,7 +11,7 @@ import SwiftUI
 struct FetchMobileApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RecipeListView(viewmodel: RecipeListViewModel(recipeService: RecipeService(networkComponent: ProdNetworkComponent())))
         }
     }
 }
