@@ -35,19 +35,13 @@ class ImageService {
     
     
     /// Fetches the `UIImage` from the endpoint, or from the cache if previously fetched.
-    /// - Returns: A UIImage from the endpoint, if none exists a placeholder empty UIImage will be returned.
+    /// - Returns: A UIImage from the endpoint.
     func fetchImage() async throws -> UIImage {
-        if let cachedImage = cache.object(forKey: endpoint as NSString) {
-            return cachedImage
-        }
+        if let cachedImage = cache.object(forKey: endpoint as NSString) { return cachedImage }
         guard let url = URL(string: endpoint) else { throw URLError(.badURL) }
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
         let data = try await networkComponent.fetchData(for: request)
-        guard let image = UIImage(data: data) else {
-            let placeholder = UIImage()
-            cache.setObject(placeholder, forKey: endpoint as NSString)
-            return placeholder
-        }
+        guard let image = UIImage(data: data) else { return UIImage() }
         cache.setObject(image, forKey: endpoint as NSString)
         return image
     }

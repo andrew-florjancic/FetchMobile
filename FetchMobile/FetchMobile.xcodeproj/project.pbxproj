@@ -32,6 +32,7 @@
 		9EE11F492D90D767002DD19A /* RecipeListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE11F482D90D767002DD19A /* RecipeListItemViewModel.swift */; };
 		9EE11F4B2D90D80C002DD19A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE11F4A2D90D80C002DD19A /* ImageView.swift */; };
 		9EE11F4D2D90D81D002DD19A /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE11F4C2D90D81D002DD19A /* ImageViewModel.swift */; };
+		9EE11F4F2D90F913002DD19A /* ImageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE11F4E2D90F913002DD19A /* ImageViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		9EE11F482D90D767002DD19A /* RecipeListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListItemViewModel.swift; sourceTree = "<group>"; };
 		9EE11F4A2D90D80C002DD19A /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		9EE11F4C2D90D81D002DD19A /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		9EE11F4E2D90F913002DD19A /* ImageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				9EE11F442D90B213002DD19A /* RecipeListViewModelTests.swift */,
+				9EE11F4E2D90F913002DD19A /* ImageViewModelTests.swift */,
 			);
 			path = ViewModelTests;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EE11F452D90B213002DD19A /* RecipeListViewModelTests.swift in Sources */,
+				9EE11F4F2D90F913002DD19A /* ImageViewModelTests.swift in Sources */,
 				9EA060302D89DAB900BCF1F4 /* MockNetworkComponent.swift in Sources */,
 				9EA060102D89B7A500BCF1F4 /* RecipeServiceTests.swift in Sources */,
 				9EA0603B2D8A086700BCF1F4 /* ImageServiceTests.swift in Sources */,
