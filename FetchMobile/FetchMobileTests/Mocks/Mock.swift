@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+@testable import FetchMobile
 
 /// A Mock with a filename and file extension containing mock data.
 protocol Mock {
@@ -83,5 +84,30 @@ extension Mocks {
         }
         
         var fileExtension: FileExtension { .json }
+    }
+}
+
+// MARK: Recipe Mocks
+extension Mocks {
+    enum Recipe: Mock {
+        case apamBalik
+        
+        var fileName: String {
+            switch(self) {
+            case .apamBalik: return "apam-balik"
+            }
+        }
+        
+        var fileExtension: FileExtension { .json }
+        
+        /// Return the mock recipe for the current mock
+        /// - Returns: A mock recipe.
+        func getMockRecipe() async throws -> FetchMobile.RecipeService.RecipeContainer.Recipe  {
+            // Dummy request isn't actually going to be used
+            let request = URLRequest(url: URL.homeDirectory)
+            let data = try await network.fetchData(for: request)
+            let recipe = try JSONDecoder().decode(FetchMobile.RecipeService.RecipeContainer.Recipe.self, from: data)
+            return recipe
+        }
     }
 }
