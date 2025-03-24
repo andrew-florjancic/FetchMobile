@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "B4C0E163-4220-41CB-8622-05BBC2BB7E9A",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:FetchMobile.xcodeproj",
+      "identifier" : "9EA05FFA2D89B78000BCF1F4",
+      "name" : "FetchMobile"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:FetchMobile.xcodeproj",
+        "identifier" : "9EA0600A2D89B7A500BCF1F4",
+        "name" : "FetchMobileTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:FetchMobile.xcodeproj",
+        "identifier" : "9EA060142D89B7A500BCF1F4",
+        "name" : "FetchMobileUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

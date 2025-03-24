@@ -72,18 +72,34 @@ extension Mocks {
 extension Mocks {
     enum RecipeService: Mock {
         case valid
+        case validSortedAZ
+        case validSortedZA
         case empty
         case malformed
+        case noAmerican
         
         var fileName: String {
             switch(self) {
             case .valid: return "recipes"
+            case .validSortedAZ: return "recipes-sorted-a-z"
+            case .validSortedZA: return "recipes-sorted-z-a"
             case .empty: return "recipes-empty"
             case .malformed: return "recipes-malformed"
+            case .noAmerican: return "recipes-no-american"
             }
         }
         
         var fileExtension: FileExtension { .json }
+        
+        /// Return the mock recipes for the current mock
+        /// - Returns: An array of mock recipes.
+        func getMockRecipes() async throws -> [FetchMobile.RecipeService.RecipeContainer.Recipe]  {
+            // Dummy request isn't actually going to be used
+            let request = URLRequest(url: URL.homeDirectory)
+            let data = try await network.fetchData(for: request)
+            let recipeContainer = try JSONDecoder().decode(FetchMobile.RecipeService.RecipeContainer.self, from: data)
+            return recipeContainer.recipes
+        }
     }
 }
 

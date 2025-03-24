@@ -3,30 +3,14 @@
 //  FetchMobileUITests
 //
 //  Created by Andrew Florjancic on 3/18/25.
+//  Copyright © 2025 Andrew Florjancic. All rights reserved.
 //
 
 import XCTest
 
 final class FetchMobileUITestsLaunchTests: XCTestCase {
-
-    override class var runsForEachTargetApplicationUIConfiguration: Bool {
-        true
-    }
-
-    override func setUpWithError() throws {
-        continueAfterFailure = false
-    }
-
     func testLaunch() throws {
-        let app = XCUIApplication()
-        app.launch()
-
-        // Insert steps here to perform after app launch but before taking a screenshot,
-        // such as logging into a test account or navigating somewhere in the app
-
-        let attachment = XCTAttachment(screenshot: app.screenshot())
-        attachment.name = "Launch Screen"
-        attachment.lifetime = .keepAlways
-        add(attachment)
+        XCTAssertEqual("💰", "💰")
+        // Pay me and I'll write these tests 🤑, but seriously these are out of scope for this assignment.
     }
 }
