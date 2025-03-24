@@ -35,6 +35,9 @@
 		9EE11F4F2D90F913002DD19A /* ImageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE11F4E2D90F913002DD19A /* ImageViewModelTests.swift */; };
 		9EE11F512D910022002DD19A /* RecipeListItemViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE11F502D910022002DD19A /* RecipeListItemViewModelTests.swift */; };
 		9EE11F532D91035C002DD19A /* apam-balik.json in Resources */ = {isa = PBXBuildFile; fileRef = 9EE11F522D91035C002DD19A /* apam-balik.json */; };
+		9EE11F552D911518002DD19A /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE11F542D911518002DD19A /* RecipeDetailView.swift */; };
+		9EE11F572D91152E002DD19A /* RecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE11F562D91152E002DD19A /* RecipeDetailViewModel.swift */; };
+		9EE11F592D911AE7002DD19A /* RecipeDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE11F582D911AE7002DD19A /* RecipeDetailViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,9 @@
 		9EE11F4E2D90F913002DD19A /* ImageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModelTests.swift; sourceTree = "<group>"; };
 		9EE11F502D910022002DD19A /* RecipeListItemViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListItemViewModelTests.swift; sourceTree = "<group>"; };
 		9EE11F522D91035C002DD19A /* apam-balik.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "apam-balik.json"; sourceTree = "<group>"; };
+		9EE11F542D911518002DD19A /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		9EE11F562D91152E002DD19A /* RecipeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModel.swift; sourceTree = "<group>"; };
+		9EE11F582D911AE7002DD19A /* RecipeDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +222,8 @@
 				9EE11F482D90D767002DD19A /* RecipeListItemViewModel.swift */,
 				9EE11F4A2D90D80C002DD19A /* ImageView.swift */,
 				9EE11F4C2D90D81D002DD19A /* ImageViewModel.swift */,
+				9EE11F542D911518002DD19A /* RecipeDetailView.swift */,
+				9EE11F562D91152E002DD19A /* RecipeDetailViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,6 +234,7 @@
 				9EE11F442D90B213002DD19A /* RecipeListViewModelTests.swift */,
 				9EE11F4E2D90F913002DD19A /* ImageViewModelTests.swift */,
 				9EE11F502D910022002DD19A /* RecipeListItemViewModelTests.swift */,
+				9EE11F582D911AE7002DD19A /* RecipeDetailViewModelTests.swift */,
 			);
 			path = ViewModelTests;
 			sourceTree = "<group>";
@@ -372,8 +381,10 @@
 				9EA060012D89B78100BCF1F4 /* RecipeListView.swift in Sources */,
 				9EE11F412D90A8C3002DD19A /* RecipeListViewModel.swift in Sources */,
 				9EA05FFF2D89B78100BCF1F4 /* FetchMobileApp.swift in Sources */,
+				9EE11F572D91152E002DD19A /* RecipeDetailViewModel.swift in Sources */,
 				9EA0602E2D89C76800BCF1F4 /* ImageService.swift in Sources */,
 				9EE11F4D2D90D81D002DD19A /* ImageViewModel.swift in Sources */,
+				9EE11F552D911518002DD19A /* RecipeDetailView.swift in Sources */,
 				9EE11F4B2D90D80C002DD19A /* ImageView.swift in Sources */,
 				9EA0602C2D89BF4500BCF1F4 /* RecipeService.swift in Sources */,
 				9EE11F492D90D767002DD19A /* RecipeListItemViewModel.swift in Sources */,
@@ -390,6 +401,7 @@
 				9EE11F512D910022002DD19A /* RecipeListItemViewModelTests.swift in Sources */,
 				9EA060102D89B7A500BCF1F4 /* RecipeServiceTests.swift in Sources */,
 				9EA0603B2D8A086700BCF1F4 /* ImageServiceTests.swift in Sources */,
+				9EE11F592D911AE7002DD19A /* RecipeDetailViewModelTests.swift in Sources */,
 				9EE11F3F2D90A425002DD19A /* Utilities.swift in Sources */,
 				9E72DC352D8DA31A004391A1 /* Mock.swift in Sources */,
 			);

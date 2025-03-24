@@ -9,7 +9,11 @@ import SwiftUI
 
 struct RecipeListView: View {
 
+    /// The `RecipeLlistViewModel` used to  configure the current view.
     @ObservedObject var viewmodel: RecipeListViewModel
+    
+    /// The currently selected recipe will be displayed in a detail view
+    @State var selectedRecipe: RecipeService.RecipeContainer.Recipe? = nil
     
     var body: some View {
         NavigationStack {
@@ -21,12 +25,19 @@ struct RecipeListView: View {
                         let model = RecipeListItemViewModel(recipe: recipe,
                                                             networkComponent: ProdNetworkComponent())
                         RecipeListItemView(model: model)
+                            .onTapGesture {
+                                selectedRecipe = recipe
+                            }
                     }
                 case .empty, .error: Text(viewmodel.state.message)
                 }
             }
             .refreshable { await viewmodel.fetchRecipes() }
             .task { await viewmodel.fetchRecipes() }
+            .sheet(item: $selectedRecipe, onDismiss: { selectedRecipe = nil }) { recipe in
+                let detailViewModel = RecipeDetailViewModel(recipe: recipe, networkComponent: ProdNetworkComponent())
+                RecipeDetailView(model: detailViewModel)
+            }
         }
     }
 }
