@@ -18,7 +18,9 @@ struct RecipeListView: View {
                 switch(viewmodel.state) {
                 case .loaded(let recipes):
                     ForEach(recipes) { recipe in
-                        Text(recipe.name) // TODO: Placeholder, replace with RecipeListItemView
+                        let model = RecipeListItemViewModel(recipe: recipe,
+                                                            networkComponent: ProdNetworkComponent())
+                        RecipeListItemView(model: model)
                     }
                 case .empty, .error: Text(viewmodel.state.message)
                 }
