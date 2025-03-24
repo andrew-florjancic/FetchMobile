@@ -3,6 +3,7 @@
 //  FetchMobile
 //
 //  Created by Andrew Florjancic on 3/18/25.
+//  Copyright © 2025 Andrew Florjancic. All rights reserved.
 //
 
 import SwiftUI

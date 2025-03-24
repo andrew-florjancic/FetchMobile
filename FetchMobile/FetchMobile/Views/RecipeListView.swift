@@ -3,6 +3,7 @@
 //  FetchMobile
 //
 //  Created by Andrew Florjancic on 3/18/25.
+//  Copyright © 2025 Andrew Florjancic. All rights reserved.
 //
 
 import SwiftUI
@@ -17,7 +18,33 @@ struct RecipeListView: View {
     
     var body: some View {
         NavigationStack {
-            Text("Demo App")
+            Text(viewmodel.title)
+            HStack {
+                Menu(viewmodel.filterMenuTitle) {
+                    Picker("", selection: $viewmodel.filterSelection) {
+                        ForEach(RecipeListViewModel.CuisineType.allCases) { cuisine in
+                            Text(cuisine.rawValue)
+                        }
+                    }
+                    .pickerStyle(.inline)
+                }
+                .onChange(of: viewmodel.filterSelection) { _ in
+                    Task { await viewmodel.filterAndSortRecipes() }
+                }
+                Spacer()
+                Menu(viewmodel.sortMenuTitle) {
+                    Picker("", selection: $viewmodel.sortingSelection) {
+                        ForEach(RecipeListViewModel.SortingOption.allCases) { sortingOption in
+                            Text(sortingOption.rawValue)
+                        }
+                    }
+                    .pickerStyle(.inline)
+                }
+                .onChange(of: viewmodel.sortingSelection) { _ in
+                        Task { await viewmodel.filterAndSortRecipes() }
+                    }
+            }
+            .padding(.horizontal)
             List {
                 switch(viewmodel.state) {
                 case .loaded(let recipes):
@@ -29,7 +56,7 @@ struct RecipeListView: View {
                                 selectedRecipe = recipe
                             }
                     }
-                case .empty, .error: Text(viewmodel.state.message)
+                case .emptyFilter, .emptyNetwork, .error: Text(viewmodel.state.message)
                 }
             }
             .refreshable { await viewmodel.fetchRecipes() }
